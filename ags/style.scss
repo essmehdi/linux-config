@@ -1,0 +1,76 @@
+// Rose Pine Color Palette
+// A beautiful, minimal color scheme with warm undertones
+
+// Base colors
+$base: #191724;
+$surface: #1f1d2e;
+$overlay: #26233a;
+
+// Text colors
+$muted: #6e6a86;
+$subtle: #908caa;
+$text: #e0def4;
+
+// Accent colors
+$love: #eb6f92;
+$gold: #f6c177;
+$rose: #ebbcba;
+$pine: #31748f;
+$foam: #9ccfd8;
+$iris: #c4a7e7;
+
+// Highlight colors
+$highlight-low: #21202e;
+$highlight-med: #403d52;
+$highlight-high: #524f67;
+
+window.Bar {
+    background: transparent;
+    font-weight: bold;
+    font-family: "Iosevka Nerd Font";
+    margin: 0 10px;
+    margin-top: 10px;
+}
+
+.bubble {
+    background-color: $surface;
+    color: $text;
+    border-radius: 20px;
+    padding: 3px 10px;
+}
+
+#Network.up {
+    color: $gold;
+}
+
+#Network.down {
+    background-color: $love;
+    color: $text;
+}
+
+#Volume {
+    color: $subtle;
+}
+
+#Volume.muted {
+    color: $muted;
+}
+
+.workspace {
+    padding: 0 5px;
+    background-color: $surface;
+    border-radius: 50px;
+    color: $muted;
+}
+
+.workspace.not-empty {
+    color: white;
+}
+
+.separator {
+    color: $highlight-high;
+}
+
+#Ip {
+    color: $subtle;
+}

@@ -1,0 +1,8 @@
+font_size 15
+window_padding_width 12
+
+
+# BEGIN_KITTY_THEME
+# GitHub Dark
+include current-theme.conf
+# END_KITTY_THEME
