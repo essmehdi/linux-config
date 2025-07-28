@@ -250,3 +250,7 @@ lspconfig.pyright.setup({
 -- PHP
 
 lspconfig.phpactor.setup({})
+
+-- Hyprland config
+
+lspconfig.hyprls.setup({})
