@@ -254,3 +254,6 @@ lspconfig.phpactor.setup({})
 -- Hyprland config
 
 lspconfig.hyprls.setup({})
+
+-- Nushell
+lspconfig.nushell.setup({})

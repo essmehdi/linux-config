@@ -19,7 +19,7 @@ parsers.blade = {
 require("nvim-treesitter.configs").setup({
 	ensure_installed = {
 		"lua", "php", "blade", "typescript", "javascript", "python", "html", "css", "java", "markdown", "toml", "json",
-		"yaml", "rust", "tsx"
+		"yaml", "rust", "tsx", "hyprlang", "nu"
 	},
 	highlight = {
 		enable = true

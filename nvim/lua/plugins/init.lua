@@ -7,7 +7,7 @@ function lazy.install(path)
 			'git',
 			'clone',
 			'--filter=blob:none',
-			'--branch=stable',       -- latest stable release
+			'--branch=stable', -- latest stable release
 			'https://github.com/folke/lazy.nvim.git',
 			path,
 		})
@@ -36,6 +36,17 @@ lazy.opts = {}
 lazy.setup({
 	{ 'nvim-lualine/lualine.nvim' },
 	{
+		"antosha417/nvim-lsp-file-operations",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-neo-tree/neo-tree.nvim",
+		},
+	},
+	{
+		'dmtrKovalenko/fff.nvim',
+		build = "cargo build --release",
+	},
+	{
 		"jellydn/hurl.nvim",
 		dependencies = {
 			"MunifTanjim/nui.nvim",
@@ -62,7 +73,7 @@ lazy.setup({
 			formatters = {
 				json = { 'jq' }, -- Make sure you have install jq in your system, e.g: brew install jq
 				html = {
-					'prettier',  -- Make sure you have install prettier in your system, e.g: npm install -g prettier
+					'prettier', -- Make sure you have install prettier in your system, e.g: npm install -g prettier
 					'--parser',
 					'html',
 				},
@@ -75,7 +86,7 @@ lazy.setup({
 			},
 			-- Default mappings for the response popup or split views
 			mappings = {
-				close = 'q',        -- Close the response popup or split view
+				close = 'q',      -- Close the response popup or split view
 				next_panel = '<C-n>', -- Move to the next response popup window
 				prev_panel = '<C-p>', -- Move to the previous response popup window
 			},
@@ -159,7 +170,7 @@ lazy.setup({
 	},
 	{
 		"kylechui/nvim-surround",
-		version = "*",     -- Use for stability; omit to use `main` branch for the latest features
+		version = "*", -- Use for stability; omit to use `main` branch for the latest features
 		event = "VeryLazy",
 		config = function()
 			require("nvim-surround").setup({
@@ -282,3 +293,5 @@ require("plugins.comment")
 require("plugins.autotag-init")
 require("plugins.gitsigns-init")
 -- require("plugins.copilot")
+require("plugins.fff")
+require("plugins.lsp-file-operations")

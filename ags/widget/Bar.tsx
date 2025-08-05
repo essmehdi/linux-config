@@ -6,7 +6,7 @@ import Clock from "./Clock";
 import LeftBubbles from "./LeftBubble";
 import RightBubbles from "./RightBubble";
 
-export default function Bar(gdkmonitor: Gdk.Monitor) {
+export default function Bar({ gdkmonitor }: { gdkmonitor: Gdk.Monitor }) {
   const time = createPoll("", 1000, "date +'%d %b %Y %H:%M'");
   const { TOP, LEFT, RIGHT } = Astal.WindowAnchor;
 
