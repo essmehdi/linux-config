@@ -1,6 +1,7 @@
 import { With } from "ags";
 import { createPoll } from "ags/time";
 import Separator from "./Separator";
+import { Gtk } from "ags/gtk4";
 
 export default function Clock() {
   const timePoll = createPoll("", 1000, "date +'%d %b %Y|%H:%M'");
@@ -10,7 +11,7 @@ export default function Clock() {
         {(t) => {
           const [date, time] = t.split("|");
           return (
-            <box>
+            <box valign={Gtk.Align.CENTER} >
               <label label={date} useMarkup />
               <Separator />
               <label label={time} useMarkup />
