@@ -34,7 +34,7 @@ export default function NetworkIndicator() {
 				<label label={isConnected(c => c ? "Operational" : "Down. Click to connect using portal")} />
 				<box spacing={5} visible={isConnected}>
 					<Separator noSpace />
-					<label name="Ip" label={ipAddress} />
+					<label name="Ip" label={ipAddress(i => i ?? "No IP")} />
 				</box>
 			</box>
 		</button>
