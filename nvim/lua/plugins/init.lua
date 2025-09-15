@@ -41,6 +41,27 @@ return {
     end,
   },
 
+  {
+    "nvim-telescope/telescope.nvim",
+    config = function()
+      local telescope = require "telescope"
+      telescope.setup {
+        defaults = {
+          layout_strategy = "vertical",
+        },
+      }
+    end,
+  },
+
+  {
+    "nvim-telescope/telescope-ui-select.nvim",
+    lazy = false,
+    config = function()
+      local telescope = require "telescope"
+      telescope.load_extension "ui-select"
+    end,
+  },
+
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 
